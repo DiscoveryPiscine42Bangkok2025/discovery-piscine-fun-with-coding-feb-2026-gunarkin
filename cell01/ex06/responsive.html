@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 06: Responsive Table</title>
+    <style>
+        /* ตั้งค่าให้ body และ html เต็มหน้าจอและไม่มี margin */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ทำให้ตารางครอบคลุมพื้นที่ทั้งหมด */
+        table {
+            width: 100%;
+            height: 100%;
+            border-collapse: collapse; /* ให้เส้นขอบรวมกัน */
+            table-layout: fixed;      /* ช่วยให้การคำนวณขนาดช่องตารางคงที่เมื่อย่อขยาย */
+        }
+
+        /* สไตล์ของช่องตาราง */
+        th, td {
+            border: 2px solid black;
+            text-align: center;
+            padding: 10px;
+            /* ข้อความจะปรับตามขนาดตาราง */
+            word-wrap: break-word; 
+        }
+
+        /* ตกแต่งส่วนหัวข้อ (ถ้ามี) */
+        thead {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>หัวข้อ 1</th>
+                <th>หัวข้อ 2</th>
+                <th>หัวข้อ 3</th>
+                <th>หัวข้อ 4</th>
+                <th>หัวข้อ 5</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ข้อมูล 1-1</td>
+                <td>ข้อมูล 1-2</td>
+                <td>ข้อมูล 1-3</td>
+                <td>ข้อมูล 1-4</td>
+                <td>ข้อมูล 1-5</td>
+            </tr>
+            <tr>
+                <td>ข้อมูล 2-1</td>
+                <td>ข้อมูล 2-2</td>
+                <td>ข้อมูล 2-3</td>
+                <td>ข้อมูล 2-4</td>
+                <td>ข้อมูล 2-5</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
